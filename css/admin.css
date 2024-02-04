@@ -1,0 +1,188 @@
+/*================= 
+    general selection 
+=================*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+/*--------- storing colors in css variables ---------*/
+/* 
+:root{
+    --bg: #ffcc;
+    --light2: #7979d2;
+    --button: #333399;
+    --success: #00ff00;
+    --danger: #ff0000;
+    --text: #000;
+    --light: #fff;
+    --color1: #f008f0;
+    --color2:rgb(16, 63, 214)0;
+} */
+:root{
+    --wait: #0000ff;
+    --success: #00ff00;
+    --danger: #ff0000;
+    --bg: #ffcc;
+    --light2: #ffa366;
+    --button: #ff6600;
+    --text: #000;
+    --light: #fff;
+    --color1: #f008f0;
+    --color2:rgb(16, 63, 214)0;
+}
+body
+{
+    background: var(--light2);
+}
+.main-body
+{
+    background: var(--light);
+}
+
+/*------ navigation css ------*/
+.navigation
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 25px;
+}
+
+.navigation .logo
+{
+    color: var(--button);
+    font-size: 30px;
+}
+.navigation .button{
+    background: var(--button);
+    padding: 10px 15px;
+    color: var(--light);
+    border-radius: 20px 20px 0;
+}
+
+.admin-contents
+{
+    padding: 15px 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.content
+{
+    background: var(--light);
+    padding: 30px 25px;
+}
+.content p
+{
+    font-size: 25px;
+    color: var(--button);
+    margin-bottom: 10px;
+}
+.content span
+{
+    color: var(--light);
+    padding: 8px 10px;
+    border-radius: 50%;
+    margin-top: 5px;
+    background: var(--button);
+}
+.content .icons
+{
+    font-size: 30px;
+    margin-left: 40px;
+    background: var(--success);
+    padding: 15px;
+    border-radius: 50%;
+    line-height: 30px;
+    margin-top: 10px;
+    color: var(--light);
+}
+.content .icons:first-child
+{
+    background: var(--danger);
+}
+.admin-others
+{
+    padding: 5px 25px;
+}
+.row-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.col-content
+{
+    align-items: center;
+    text-align: center;
+    background: transparent;
+    border: 2px solid var(--light);
+    padding: 15px 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+.col-content .link
+{
+    color: var(--light);
+    font-size: 40px;
+}
+.col-content .edit
+{
+    color: var(--light);
+    font-size: 30px;
+}
+/*==================== add model ====================*/
+.add-container
+{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px 60px;
+    background: var(--light);
+}
+.all{
+    top: 50%; 
+}
+.add-form h2
+{
+    color: var(--light2);
+}
+.add-form
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.add-form input
+{
+    height: 30px;
+    width: 100%;
+    border: 2px solid var(--light2);
+    outline: none;
+    color: var(--light2);
+    padding: 0 5px;
+}
+.add-form .send input[type='submit']
+{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    padding: 5px 10px;
+    color: var(--light2);
+    background: var(--button);
+}
+@media(max-width: 700px)
+{
+    .admin-contents,.row-content
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .add-container
+    {
+        width: 300px;
+        padding: 20px 40px;
+        background: var(--light);
+    }
+}

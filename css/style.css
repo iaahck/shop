@@ -1,0 +1,376 @@
+/*================= 
+    general selection 
+=================*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+/*--------- storing colors in css variables ---------*/
+:root{
+    --bg: #ffcc;
+    --light2: #ffa366;
+    --button: #ff6600;
+    --text: #000;
+    --light: #fff;
+    --danger: #ff0000;
+    --success: #00ff00;
+}
+/* :root{
+    --bg: #ffcc;
+    --light2: hsl(240, 50%, 65%);
+    --button: #333399;
+    --text: #000;
+    --light: #fff;
+} */
+.main-body
+{
+    background: var(--light);
+}
+/*============= main content css =============*/
+.main-content
+{
+    background: url(../img/2.jpg);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/*------ navigation css ------*/
+.navigation
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 25px;
+}
+
+.navigation .logo
+{
+    color: var(--button);
+    font-size: 30px;
+}
+.navigation .button{
+    background: var(--button);
+    padding: 10px 15px;
+    color: var(--light);
+    border-radius: 20px 20px 0;
+}
+
+
+/*----- text area css -----*/
+.text-area{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.text-area h1{
+    font-size: 30px;
+    text-align: center;
+    color: var(--light);
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.text-area .button-1{
+    background: var(--button);
+    border: 2px solid var(--light);
+    padding: 10px 15px;
+    color: var(--light);
+    margin-left: 100px;
+}
+.text-area .reg-btn{
+    background: transparent;
+    border: 2px solid var(--nav);
+    padding: 10px 15px;
+    color: var(--light);
+    margin-left: 100px;
+}
+
+/*------- all catigories css -------*/
+.all-products
+{
+    padding: 20px;
+    background: var(--light2);
+}
+.all-products h1
+{
+    margin: 20px 0;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--light);
+}
+.catigories-container
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+.catigories
+{
+    background: transparent;
+    border: 1px solid var(--button);
+    padding: 20px;
+    text-align: center;
+}
+.catigories a
+{
+    color: var(--light);
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.catigories .items-img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.items-btn{
+    text-align: center;
+    margin: 20px;
+}
+.more
+{
+    color: var(--light);
+}
+.catigories .fas{
+    font-size: 40px;
+}
+.allcat
+{
+    text-align: center;
+    background: var(--light);
+    color: var(--button);
+    padding: 15px 25px;
+}
+.non
+{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    justify-content: center;
+}
+.non a
+{
+    text-align: center;
+    margin-left: 10px;
+    background: var(--light);
+    color: var(--button);
+    padding: 15px 25px;
+}
+.non p{
+    color: var(--light);
+    margin-right: 10px;
+}
+
+
+/*=========== contact css ===========*/
+.contact
+{
+    padding: 20px;
+    background: var(--light);
+}
+.contact h1
+{
+    margin: 20px 0;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--button); 
+}
+.contact .row
+{
+    display: flex;
+    justify-content: space-around;
+}
+.col p
+{
+    margin: 20px 0;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--button); 
+}
+.col iframe
+{
+    border: 1px solid var(--button);
+    width: 100%;
+    height: 100%;
+}
+.contact .col
+{
+    flex-basis: calc(100% / 2);
+}
+.contact-form
+{
+    padding: 20px;
+}
+.contact-form .field
+{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+.field input
+{
+    height: 40px;
+    width: 100%;
+    border: 1px solid var(--button);
+    padding-left: 8px;
+    color: var(--button);
+    outline: none;
+    font-size: 20px;
+}
+.field textarea
+{
+    resize: none;
+    width: 100%;
+    border: 1px solid var(--button);
+    padding: 8px;
+    color: var(--button);
+    outline: none;
+    font-size: 20px;
+}
+.field ::placeholder
+{
+    color: var(--button);
+}
+.send input
+{
+    background: var(--button);
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--button);
+    outline: none;
+    font-size: 20px;
+    color: var(--light);
+}
+
+/*=========== footer section css ===========*/
+
+footer
+{
+    padding: 20px;
+    background: var(--button);
+    border-top-left-radius: 150px;
+}
+footer .row
+{
+    display: flex;
+    justify-content: space-around;
+}
+footer .col
+{
+    flex-basis: calc(100% / 3);
+    margin: 20px 0;
+}
+footer .col h3,footer .col-2 h3
+{
+    color: var(--light);
+    display: block;
+    color: var(--light);
+    margin-top: 10px;
+    margin-left: 12px;
+}
+footer .col a
+{
+    display: block;
+    color: var(--light);
+    margin-left: 12px;
+}
+footer .col-2 p
+{
+    display: block;
+    color: var(--light);
+    margin-left: 12px;
+}
+
+footer .social
+{
+    display: flex;
+}
+.social a
+{
+    margin-top: 25px;
+    background: var(--light);
+    color: var(--button) !important;
+    border-radius: 20px;
+    padding: 10px;
+}
+footer hr
+{
+    background: var(--light);
+    margin-bottom: 20px;
+}
+footer .copy,.desingner
+{
+    color: var(--light);
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+/*============= Mobile Responsive =============*/
+@media(max-width: 700px){
+    .text-area h1{
+        font-size: 20px;
+    }
+    .text-area .button-1{
+        padding: 8px 10px;
+    }
+    .catigories-container
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .contact .row
+    {
+        flex-direction: column;
+    }
+    footer .row{
+        flex-direction: column;
+    }
+    /*======== orders css ========*/
+    .orders-container
+    {
+        flex-direction: column;
+    }
+    /* buy css */
+    .items-container
+    {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+    }
+}
+@media(min-width: 400px){
+    .text-area h1{
+        font-size: 20px;
+    }
+    .text-area .button-1{
+        padding: 8px 10px;
+    }
+    .catigories-container
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .contact .row
+    {
+        flex-direction: column;
+    }
+    footer .row{
+        flex-direction: column;
+    }
+    /*======== orders css ========*/
+    .orders-container
+    {
+        flex-direction: column;
+    }
+    /* buy css */
+    .items-container
+    {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+    }
+}

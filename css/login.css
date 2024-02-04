@@ -1,0 +1,140 @@
+/*================= 
+    general selection 
+=================*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+/*--------- storing colors in css variables ---------*/
+:root{
+    --bg: #ffcc;
+    --light2: #ffa366;
+    --button: #ff6600;
+    --text: #000;
+    --light: #fff;
+}
+/* 
+:root{
+    --bg: #ffcc;
+    --light2: hsl(240, 50%, 65%);
+    --button: #333399;
+    --text: #000;
+    --light: #fff;
+    --h1: font-size: 40px;
+} */
+body
+{
+    background: var(--light2);
+}
+/*=============== login model css ===============*/
+.login-body
+{
+    background: url(../img/get.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+.login-model
+{
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: transparent;
+    width: 400px;
+    height: 440px;
+    border: 2px solid var(--light2);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+.login-model .form-box
+{
+    width: 100%;
+    padding: 40px;
+}
+.form-box h2
+{
+    font-size: 30px;
+    color: var(--light);
+    text-align: center;
+}
+.input-box
+{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid var(--button);
+    margin: 30px 0;
+}
+.input-box input
+{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 0;
+    outline: none;
+    font-size: 15px;
+    color: var(--light);
+    padding: 0 8px;
+}
+.input-box ::placeholder
+{
+    color: var(--light);
+}
+.remember-me
+{
+    color: var(--light);
+    display: flex;
+    justify-content: space-around;
+}
+.remember-me input
+{
+    font-size: 1.2em;
+    margin-right: 5px;
+    color: var(--light);
+
+}
+.remember-me .forget
+{
+    color: var(--ligh);
+}
+
+.form-box input[type='submit']
+{
+    width: 100%;
+    height: 45px;
+    background: var(--button);
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 15px 0;
+    color: var(--light);
+    transition: 0.5s;
+}
+.login-register
+{
+    display: flex;
+    justify-content: space-between;
+    color: var(--light);
+}
+.login-register .register-link
+{
+    color: var(--button);
+    margin-left: 5px;
+    background: var(--light);
+    padding: 5px 10px;
+}

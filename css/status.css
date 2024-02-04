@@ -1,0 +1,73 @@
+                /*================= 
+            general selection 
+        =================*/
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            text-decoration: none;
+        }
+
+        /*--------- storing colors in css variables ---------*/
+
+        :root{
+        --bg: #ffcc;
+        --light2: #ffa366;
+        --button: #ff6600;
+        --text: #000;
+        --light: #fff;
+        --danger: #ff0000;
+        --success: #00ff00;
+        --wait: #0000ff;
+    }
+        body
+        {
+            background: var(--light2);
+            width: 100%;
+        }
+
+        /*=========view users css=========*/
+        .admin-user-list h1
+        {
+            color: var(--light);
+            text-align: center;
+            margin: 15px 0;
+        }
+        .board
+        {
+            padding: 10px 8px;
+            width: 100%;
+        }
+        .board th
+        {
+            border: 1px solid var(--light);
+        }
+        .board table
+        {
+            text-align: center;
+            width: 100%;
+            color: var(--light);
+            font-size: 20px;
+        }
+        .space
+        {
+            margin: 10px 0;
+        }
+        .status-user
+        {
+            color: var(--light);
+            background: var(--wait);
+            font-size:25px;
+            padding: 0 15px;
+
+        }
+        .status-user:active{
+            color: var(--light);
+            background: var(--danger);
+        }
+        @media(max-width: 700px){
+            .board
+            {
+                overflow-x: auto;
+            }
+        }

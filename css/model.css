@@ -1,0 +1,115 @@
+        /*================= 
+        general selection 
+        =================*/
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            text-decoration: none;
+        }
+
+        /*--------- storing colors in css variables ---------*/
+        :root{
+        --success: #00ff00;
+        --danger: #ff0000;
+        --bg: #ffcc;
+        --light2: #ffa366;
+        --button: #ff6600;
+        --text: #000;
+        --light: #fff;
+        --color1: #f008f0;
+        --color2:rgb(16, 63, 214)0;
+    }
+        /* :root{
+            --bg: #ffcc;
+            --light2: #7979d2;
+            --button: #333399;
+            --success: #00ff00;
+            --danger: #ff0000;
+            --text: #000;
+            --light: #fff;
+            --color1: #f008f0;
+            --color2:rgb(16, 63, 214)0;
+        } */
+        body
+        {
+            background: var(--light2);
+            width: 100%;
+        }
+        .items-container
+        {
+            padding: 20px;
+        }
+        .items-container .items-head
+        {
+            text-align: center;
+            color: var(--light);
+            font-size: 30px;
+            text-transform: capitalize;
+            font-weight: bold;
+            padding: 0 15px;
+        }
+        .items-head .add-items
+        {
+            float: right;
+            color: var(--light2);
+            background: var(--light);
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+        .add-container
+        {
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background: var(--light);
+            width: 500px;
+            padding: 20px 25px;
+            border: 1px solid var(--light);
+            
+        }
+        .add-container .add-field
+        {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        .add-field input
+        {
+            height: 30px;
+            width: 100%;
+            border: 1px solid var(--light2);
+            outline: none;
+            padding: 0 8px;
+            color: var(--light2);
+        }
+        .add-container header
+        {
+            font-size: 30px;
+            text-align: center;
+            color: var(--light2);
+        }
+        .add-container ::placeholder 
+        {
+            color: var(--light2);
+        }
+        .add-send input[type='submit']
+        {
+            color: var(--light);
+            border: 0;
+            width: 100%;
+            background: var(--light2);
+            padding: 5px 15px;
+        }
+        .cat-items-container 
+        {
+            margin-bottom: 20%;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+        .cat-items-container .items-body img{
+            width: 100%;
+            height: 100%;
+        }

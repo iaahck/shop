@@ -1,0 +1,118 @@
+        /*================= 
+            general selection 
+        =================*/
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            text-decoration: none;
+        }
+
+        /*--------- storing colors in css variables ---------*/
+
+        :root{
+        --success: #00ff00;
+        --danger: #ff0000;
+        --bg: #ffcc;
+        --light2: #ffa366;
+        --button: #ff6600;
+        --text: #000;
+        --light: #fff;
+        --color1: #f008f0;
+        --color2:rgb(16, 63, 214)0;
+         }
+        /* :root{
+            --bg: #ffcc;
+            --light2: hsl(240, 50%, 65%);
+            --button: #333399;
+            --text: #000;
+            --light: #fff;
+            --h1: font-size: 40px;
+        } */
+        body
+        {
+            background: var(--light2);
+        }
+        /*====== chage password ======*/
+        .change-container
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background: var(--light);
+            padding: 40px 60px;
+        }
+        .change-header
+        {
+            color: var(--light2);
+            border-bottom: 5px solid var(--light2);
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .change-field
+        {
+            margin-top: 8px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+        .change-field label
+        {
+            margin: 3px 8px;
+            font-size: 20px;
+            color: var(--light2);
+        }
+        .change-field input
+        {
+            outline: none;
+            height: 30px;
+            font-size: 20px;
+            color: var(--light2);
+            width: 100%;
+            border: 1px solid var(--light2);
+            padding: 3px 8px;
+        }
+        .change-field ::placeholder
+        {
+            color: var(--light2);
+        }
+        .save-field 
+        {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+        .save-field input[type='submit']
+        {
+            width: 100%;
+            background: var(--light2);
+            border: 0;
+            color: var(--light);
+            padding: 5px 10px;
+        }
+        .finded-items
+        {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .finded-items .item-row-find
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+        .item-row-find div
+        {
+            margin: 20px 25px;
+        }
+         /* responsib */
+         @media (max-width: 700px){
+            .change-container
+            {
+                width: 300px;
+                padding: 40px 60px;
+            }
+        }

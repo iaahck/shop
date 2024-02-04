@@ -1,0 +1,269 @@
+/*================= 
+    general selection 
+=================*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+/*--------- storing colors in css variables ---------*/
+:root{
+    --bg: #ffcc;
+    --light2: #ffa366;
+    --button: #ff6600;
+    --text: #000;
+    --light: #fff;
+    --wait: #0000ff;
+    --success: #00ff00;
+    --danger: #ff0000;
+    --bg: #ffcc;
+}
+/*------- all catigories css -------*/
+.all-products
+{
+    padding: 20px;
+    background: var(--light2);
+}
+.all-products h1
+{
+    margin: 20px 0;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--light);
+}
+.catigories-container
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+.catigories
+{
+    background: transparent;
+    border: 1px solid var(--button);
+    padding: 20px;
+    text-align: center;
+}
+.catigories a
+{
+    color: var(--light);
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.catigories .items-img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.items-btn{
+    text-align: center;
+    margin: 20px;
+}
+.more
+{
+    color: var(--light);
+}
+.catigories .fas{
+    font-size: 40px;
+}
+.allcat
+{
+    text-align: center;
+    background: var(--light);
+    color: var(--button);
+    padding: 15px 25px;
+}
+.non
+{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    justify-content: center;
+}
+.non a
+{
+    text-align: center;
+    margin-left: 10px;
+    background: var(--light);
+    color: var(--button);
+    padding: 15px 25px;
+}
+.non p{
+    color: var(--light);
+    margin-right: 10px;
+}
+
+
+.items-container
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+.items-card
+{
+    display: flex;
+    border: 1px solid var(--light);
+    padding: 20px;
+    flex-direction: column;
+}
+.items-card .order-pic
+{
+    height: 500px;
+    object-fit: cover;
+    width: 500px;
+    margin: 10px 0;
+    /* object-fit: contain; */
+}
+.items-card .discription
+{
+    color: var(--light);
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    word-break: break-all;
+}
+.items-card .buy-item
+{
+    color: var(--button);
+    background: var(--light);
+    padding: 5px 25px;
+    text-align: center;
+}
+.add-container
+{
+    margin-top: 15%;
+    background: var(--light);
+    width: 400px;
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px 30px;
+}
+.add-text
+{
+    text-align: center;
+    color: var(--light2);
+    font-size: 30px;
+}
+.add-field
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.add-field label
+{
+    color: var(--light2);
+    margin: 3px 5px;
+    font-size: 25px;
+}
+.add-field input
+{
+    border: 1px solid var(--light2);
+    width: 100%;
+    height: 30px;
+    outline: none;
+    color: var(--light2);
+    padding-left: 8px;
+}
+.save-field input[type='submit']
+{
+    color: var(--light);
+    background: var(--light2);
+    width: 100%;
+    padding: 5px 15px;
+    border: 1px solid var(--light2);
+}
+.add-container ::placeholder
+{
+    color: var(--light2);
+}
+.add-container .operations{
+    display: flex;
+    justify-content: space-around;
+}
+.operations .links{
+    color: var(--light);
+    background: var(--light2);
+    padding: 5px 10px;
+}
+.costomer-details{
+    padding: 20px;
+    margin: 20px;
+}
+.costomer-details h1{
+    color: var(--light);
+}
+.costomer-details h2{
+    color: var(--light);
+    margin-left: 25px;
+    margin-bottom: 30px;
+}
+.form-box-add{
+    background: var(--light);
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.status-text{
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    color: var(--light2);
+    margin-bottom: 20px;
+}
+.status-box{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.status-box input{
+    outline: none;
+    padding: 0 8px;
+    color: var(--light2);
+    width: 100%;
+    height: 40px;
+    border: 2px solid var(--light2);
+}
+.status-send input[type='submit']{
+    padding: 0 8px;
+    background: var(--light2);
+    color: var(--light);
+    width: 100%;
+    height: 40px;
+    border: 2px solid var(--light2);
+}
+/*============= Mobile Responsive =============*/
+@media(max-width: 700px)
+{
+    .catigories-container
+{
+    grid-template-columns: repeat(1, 1fr);
+}
+    .contact .row
+    {
+        flex-direction: column;
+    }
+    footer .row{
+        flex-direction: column;
+    }
+    /*======== orders css ========*/
+    .orders-container
+    {
+        flex-direction: column;
+    }
+    /* buy css */
+    .items-container
+    {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+    }
+}
